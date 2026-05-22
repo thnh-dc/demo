@@ -1,22 +1,21 @@
 <?php
-$host = 'localhost';
-$dbname = 'fd-tech';
-$username = 'root';
-$password = '';
-$charset = 'utf8mb4';
-
-$dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
-
-$options = [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES => false,
-];
+$host = getenv('DB_HOST') ?: 'localhost';
+$port = getenv('DB_PORT') ?: '3306';
+$dbname = getenv('DB_NAME') ?: 'fd-tech';
+$user = getenv('DB_USER') ?: 'root';
+$pass = getenv('DB_PASS') ?: '';
 
 try {
-    $pdo = new PDO($dsn, $username, $password, $options);
+    $pdo = new PDO(
+        "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4",
+        $user,
+        $pass
+    );
+
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
 } catch (PDOException $e) {
-    error_log($e->getMessage()); // log lỗi thật
-    die("Lỗi kết nối database!"); // ẩn lỗi với user
+    die("Lỗi kết nối database: " . $e->getMessage());
 }
 ?>

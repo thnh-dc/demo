@@ -36,8 +36,8 @@ $avatarSrc = getAvatarSrc($user['avatar'] ?? '');
 $page_title = 'Chi tiết người dùng';
 $page_icon = 'fa-solid fa-users';
 $custom_css = '
-    <link rel="stylesheet" href="/FD-Tech/assets/css/style_user_management.css">
-    <link rel="stylesheet" href="/FD-Tech/assets/css/style_notification.css">
+    <link rel="stylesheet" href="/assets/css/style_user_management.css">
+    <link rel="stylesheet" href="/assets/css/style_notification.css">
 ';
 include 'includes/header.php';
 include '../includes/notification.php';

@@ -20,7 +20,7 @@ $is_logged_in = isset($_SESSION['user_id']);
         </div>
     </div>
     <button type="button" class="ai-floating-btn" id="aiFloatingBtn">
-        <img src="/FD-Tech/assets/images/ai-bot.png" alt="FD Bot">
+        <img src="/assets/images/ai-bot.png" alt="FD Bot">
     </button>
 </div>
 <div class="ai-chat-box" id="aiChatBox">
@@ -68,10 +68,10 @@ $is_logged_in = isset($_SESSION['user_id']);
 </div>
 <script>
     window.FD_AI_CONFIG = {
-        endpoint: '/FD-Tech/user/ai_assistant.php',
-        sellerSendEndpoint: '/FD-Tech/user/chat/seller_chat_send.php',
-        sellerFetchEndpoint: '/FD-Tech/user/chat/seller_chat_fetch.php',
+        endpoint: '/user/ai_assistant.php',
+        sellerSendEndpoint: '/user/chat/seller_chat_send.php',
+        sellerFetchEndpoint: '/user/chat/seller_chat_fetch.php',
         isLoggedIn: <?= $is_logged_in ? 'true' : 'false' ?>
     };
 </script>
-<script src="/FD-Tech/assets/js/ai_assistant.js"></script>
+<script src="/assets/js/ai_assistant.js"></script>

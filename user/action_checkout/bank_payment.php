@@ -62,8 +62,8 @@ if (
     $_SESSION['noti_type'] = 'error';
 }
 $custom_css = '
-    <link rel="stylesheet" href="/FD-Tech/assets/css/style_checkout.css">
-    <link rel="stylesheet" href="/FD-Tech/assets/css/style_notification.css">
+    <link rel="stylesheet" href="/assets/css/style_checkout.css">
+    <link rel="stylesheet" href="/assets/css/style_notification.css">
 ';
 include '../../includes/header.php';
 include '../../includes/notification.php';
@@ -113,7 +113,7 @@ include '../../includes/notification.php';
                 <div class="bank-payment-box">
                     <div class="bank-qr-box">
                         <img 
-                            src="/FD-Tech/assets/images/qr-payment.jpg" 
+                            src="/assets/images/qr-payment.jpg" 
                             alt="QR thanh toán" 
                             class="bank-qr-img"
                         >
@@ -145,13 +145,13 @@ include '../../includes/notification.php';
                     <?php
                         $img = $item['product_image'] ?? '';
                         if (empty($img)) {
-                            $img_src = "/FD-Tech/assets/images/logo-fd.jpg";
+                            $img_src = "/assets/images/logo-fd.jpg";
                         } elseif (filter_var($img, FILTER_VALIDATE_URL)) {
                             $img_src = $img;
                         } elseif (strpos($img, 'upload/product_image/') === 0) {
-                            $img_src = "/FD-Tech/" . $img;
+                            $img_src = "/" . $img;
                         } else {
-                            $img_src = "/FD-Tech/upload/product_image/" . $img;
+                            $img_src = "/upload/product_image/" . $img;
                         }
                     ?>
                     <div class="checkout-item">
@@ -159,7 +159,7 @@ include '../../includes/notification.php';
                             src="<?= htmlspecialchars($img_src) ?>" 
                             class="checkout-img"
                             alt="<?= htmlspecialchars($item['product_name']) ?>"
-                            onerror="this.src='/FD-Tech/assets/images/logo-fd.jpg'"
+                            onerror="this.src='/assets/images/logo-fd.jpg'"
                         >
                         <div class="checkout-info">
                             <p class="checkout-name">

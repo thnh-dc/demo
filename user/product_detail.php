@@ -260,7 +260,7 @@ $display_price = $has_discount ? $sp['discount_price'] : $sp['price'];
 <script>
     const productImages = <?= json_encode($image_gallery); ?>;
     const isLoggedIn = <?= isset($_SESSION['user_id']) ? 'true' : 'false' ?>;
-    const loginUrl = '/FD-Tech/auth/login.php';
+    const loginUrl = '/auth/login.php';
     document.addEventListener('DOMContentLoaded', function() {
         let currentIndex = 0;
         const mainImg = document.getElementById('main-product-image');

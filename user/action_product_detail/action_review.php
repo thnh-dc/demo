@@ -15,7 +15,7 @@ if (!isset($_SESSION['user_id'])) {
     echo json_encode([
         'success' => false,
         'message' => 'Oppss, bạn chưa đăng nhập rồi!',
-        'redirect' => '/FD-Tech/auth/login.php'
+        'redirect' => '/auth/login.php'
     ]);
     exit;
 }

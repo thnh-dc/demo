@@ -13,7 +13,7 @@
 
     <header class="auth-header">
         <div class="auth-header-container">
-            <a href="/FD-Tech/user/index.php" class="auth-logo">
+            <a href="/user/index.php" class="auth-logo">
                 <img src="../assets/images/logo-fd.jpg" alt="FD Tech Logo" onerror="this.style.display='none'">
                 <span class="auth-brand">FD<span>TECH</span></span>
             </a>

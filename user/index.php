@@ -38,7 +38,7 @@
             echo '<a href="product_detail.php?id='.$row['id'].'" style="text-decoration:none; color:#333;">';
             echo '<img src="'.(strpos($row['image_url'], 'http') === 0 
                 ? $row['image_url'] 
-                : 'http://localhost/FD-Tech/upload/product_image/'.$row['image_url']).'">';
+                : 'https://fd-tech.onrender.com//upload/product_image/'.$row['image_url']).'">';
             echo '<h3>'.$row['name'].'</h3>';
             if (isset($row['discount_price']) && $row['discount_price'] > 0) {
                 echo '<div class="price-container">';
@@ -75,7 +75,7 @@
                 echo '<a href="product_detail.php?id='.$row['id'].'" style="text-decoration:none; color:#333;">';
                 echo '<img src="'.(strpos($row['image_url'], 'http') === 0 
                     ? $row['image_url'] 
-                    : 'http://localhost/FD-Tech/upload/product_image/'.$row['image_url']).'">';
+                    : 'https://fd-tech.onrender.com/upload/product_image/'.$row['image_url']).'">';
                     echo '<h3>'.$row['name'].'</h3>';
                     if (isset($row['discount_price']) && $row['discount_price'] > 0) {
                         echo '<div class="price-container">';
@@ -105,7 +105,7 @@
                 echo '<a href="product_detail.php?id='.$row['id'].'" style="text-decoration:none; color:#333;">';
                 echo '<img src="'.(strpos($row['image_url'], 'http') === 0 
                     ? $row['image_url'] 
-                    : 'http://localhost/FD-Tech/upload/product_image/'.$row['image_url']).'">';
+                    : 'https://fd-tech.onrender.com/upload/product_image/'.$row['image_url']).'">';
                     echo '<h3>'.$row['name'].'</h3>';
                     if (isset($row['discount_price']) && $row['discount_price'] > 0) {
                         echo '<div class="price-container">';

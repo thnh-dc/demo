@@ -128,7 +128,7 @@ if ($intent === "product") {
         $context = "Kết quả sản phẩm tìm được trong database:\n";
 
         foreach ($products as $p) {
-            $product_link = "/FD-Tech/user/product_detail.php?id=" . $p['id'];
+            $product_link = "/user/product_detail.php?id=" . $p['id'];
             $context .= "- ID: {$p['id']} | Tên: {$p['name']} | Giá: {$p['price']} | Tồn kho: {$p['stock_quantity']} | Danh mục: {$p['category_name']} | Mô tả: {$p['description']} | Link chi tiết: {$product_link}\n";
         }
     }
@@ -202,8 +202,8 @@ Quy tắc bắt buộc:
 - Trả lời ngắn gọn, rõ ràng, thân thiện.
 - Chỉ dùng dữ liệu được cung cấp trong phần NGỮ CẢNH.
 - Không bịa sản phẩm, giá, tồn kho hoặc đơn hàng.
-- Nếu có sản phẩm, không được hiển thị raw link dạng /FD-Tech/user/product_detail.php?id=ID.
-- Khi giới thiệu sản phẩm, phải viết đúng dạng: Xem chi tiết <a href=\"/FD-Tech/user/product_detail.php?id=ID\" class=\"ai-detail-link\">tại đây</a>.
+- Nếu có sản phẩm, không được hiển thị raw link dạng /user/product_detail.php?id=ID.
+- Khi giới thiệu sản phẩm, phải viết đúng dạng: Xem chi tiết <a href=\"/user/product_detail.php?id=ID\" class=\"ai-detail-link\">tại đây</a>.
 - Nếu người dùng chưa đăng nhập mà hỏi đơn hàng, hãy yêu cầu đăng nhập.
 - Nếu không tìm thấy dữ liệu phù hợp, hãy nói rõ là chưa tìm thấy.
 Một số nội dung đáng chú ý:
@@ -211,9 +211,9 @@ Một số nội dung đáng chú ý:
 - Khi người dùng hỏi các sản phẩm không có trong danh mục sản phẩm của trang web, hãy khéo léo giới thiệu các sản phẩm hiện có trên trang Web ( không có tablet)
 - Khi người dùng muốn chat với người bán hoặc liên hệ người bán, hãy đề cập khéo léo đến hotline của trang web: 19001000 hoặc địa chỉ email của trang web.
 - Khi người dùng hỏi về đơn hàng, hãy khéo léo chuyển hướng người dùng sang trang đơn hàng để xem chi tiết.
-- Khi chuyển hướng sang giỏ hàng phải viết đúng dạng: <a href=\"http://localhost/FD-Tech/user/profile.php?action=orders\" class=\"ai-detail-link\">xem chi tiết đơn hàng</a>.
-- Người dùng nhắc đến việc đổi mật khẩu, hãy khéo léo chuyển về trang đổi mật khẩu, viết đúng: <a href=\"http://localhost/FD-Tech/user/profile.php?action=password\" class=\"ai-detail-link\">đổi mật khẩu ngay</a>.
-- Muốn xem hoặc chỉnh sửa thông tin cá nhân : <a href=\"http://localhost/FD-Tech/user/profile.php\" class=\"ai-detail-link\">đổi thông tin</a>.
+- Khi chuyển hướng sang giỏ hàng phải viết đúng dạng: <a href=\"http://localhost/user/profile.php?action=orders\" class=\"ai-detail-link\">xem chi tiết đơn hàng</a>.
+- Người dùng nhắc đến việc đổi mật khẩu, hãy khéo léo chuyển về trang đổi mật khẩu, viết đúng: <a href=\"http://localhost/user/profile.php?action=password\" class=\"ai-detail-link\">đổi mật khẩu ngay</a>.
+- Muốn xem hoặc chỉnh sửa thông tin cá nhân : <a href=\"http://localhost/user/profile.php\" class=\"ai-detail-link\">đổi thông tin</a>.
 
 Trạng thái người dùng: {$login_status}
 Ý định đã phân loại: {$intent}

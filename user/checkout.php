@@ -4,7 +4,7 @@ require_once '../auth/check_login.php';
 require_once '../auth/user_only.php';
 require_once '../config/database.php';
 
-$custom_css = '<link rel="stylesheet" href="/FD-Tech/assets/css/style_checkout.css">';
+$custom_css = '<link rel="stylesheet" href="/assets/css/style_checkout.css">';
 include '../includes/header.php';
 
 $selectedItems = $_POST['selected_items'] ?? '';
@@ -79,13 +79,13 @@ foreach ($cartItems as $row) {
                         $img = $item['image_url'] ?? '';
 
                         if (empty($img)) {
-                            $img_src = "/FD-Tech/assets/images/logo-fd.jpg";
+                            $img_src = "/assets/images/logo-fd.jpg";
                         } elseif (filter_var($img, FILTER_VALIDATE_URL)) {
                             $img_src = $img;
                         } elseif (strpos($img, 'upload/product_image/') === 0) {
-                            $img_src = "/FD-Tech/" . $img;
+                            $img_src = "/" . $img;
                         } else {
-                            $img_src = "/FD-Tech/upload/product_image/" . $img;
+                            $img_src = "/upload/product_image/" . $img;
                         }
                     ?>
                     <div class="checkout-item">
@@ -93,7 +93,7 @@ foreach ($cartItems as $row) {
                             src="<?= htmlspecialchars($img_src) ?>" 
                             class="checkout-img"
                             alt="<?= htmlspecialchars($item['name']) ?>"
-                            onerror="this.src='/FD-Tech/assets/images/logo-fd.jpg'"
+                            onerror="this.src='/assets/images/logo-fd.jpg'"
                         >
                         <div class="checkout-info">
                             <p class="checkout-name">

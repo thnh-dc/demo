@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     $_SESSION['noti_message'] = 'Oppss, bạn chưa đăng nhập rồi!';
     $_SESSION['noti_type'] = 'error';
 
-    header("Location: /FD-Tech/auth/login.php");
+    header("Location: /auth/login.php");
     exit();
 }
 ?>

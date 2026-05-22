@@ -16,11 +16,11 @@ function requireLoginForProductAction()
             echo json_encode([
                 'success' => false,
                 'message' => 'Oppss, bạn chưa đăng nhập rồi!',
-                'redirect' => '/FD-Tech/auth/login.php'
+                'redirect' => '/auth/login.php'
             ]);
             exit;
         }
-        header("Location: /FD-Tech/auth/login.php");
+        header("Location:/auth/login.php");
         exit;
     }
 }

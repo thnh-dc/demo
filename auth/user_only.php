@@ -72,7 +72,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
                 Tài khoản người quản trị không thể truy cập trực tiếp vào trang người dùng.
                 Vui lòng đăng xuất tài khoản quản trị trước khi sử dụng chức năng dành cho người dùng.
             </p>
-            <a href="/FD-Tech/auth/logout.php" class="btn-logout">
+            <a href="/auth/logout.php" class="btn-logout">
                 Đăng xuất
             </a>
         </div>

@@ -5,8 +5,8 @@
     require_once '../config/database.php';
 
     $custom_css = '
-    <link rel="stylesheet" href="/FD-Tech/assets/css/style_cart.css">
-    <link rel="stylesheet" href="/FD-Tech/assets/css/style_notification.css">';
+    <link rel="stylesheet" href="/assets/css/style_cart.css">
+    <link rel="stylesheet" href="/assets/css/style_notification.css">';
     include '../includes/header.php';
 
     $user_id = $_SESSION['user_id'] ?? 0;
@@ -171,7 +171,7 @@
         </div>
     </section>
 </div>
-<script src="/FD-Tech/assets/js/script_cart.js"></script>
+<script src="/assets/js/script_cart.js"></script>
 
 <?php include '../includes/ai_assistant_widget.php'; ?>
 <?php include '../includes/footer.php'; ?>

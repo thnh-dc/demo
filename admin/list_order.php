@@ -37,8 +37,8 @@ try {
 $page_title = 'Quản lí đơn hàng';
 $page_icon = 'fa-solid fa-cart-shopping';
 $custom_css = '
-    <link rel="stylesheet" href="/FD-Tech/assets/css/style_list_oder.css">
-    <link rel="stylesheet" href="/FD-Tech/assets/css/style_notification.css">
+    <link rel="stylesheet" href="/assets/css/style_list_oder.css">
+    <link rel="stylesheet" href="/assets/css/style_notification.css">
 ';
 
 include 'includes/header.php';

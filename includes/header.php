@@ -25,8 +25,8 @@
     <div class="main-header">
         <div class="container header-flex">
             <div class="logo">
-                <a href="/FD-Tech/user/index.php">
-                    <img src="/FD-Tech/assets/images/logo-FD.jpg" alt="FD TECH" style="height: 50px;">
+                <a href="/user/index.php">
+                    <img src="/assets/images/logo-FD.jpg" alt="FD TECH" style="height: 50px;">
                     <span style="font-size: 24px; font-weight: bold; color: #333;">FD<span
                             style="color: #00a8ff;">TECH</span></span>
                 </a>
@@ -71,7 +71,7 @@
                             $server_file_path = __DIR__ . "/../upload/avatar_user/" . $avatar_name;
 
                             // Đường dẫn URL bắt đầu bằng /FD-Tech/ để luôn lấy đúng thư mục gốc
-                            $browser_img_url = "/FD-Tech/upload/avatar_user/" . $avatar_name;
+                            $browser_img_url = "/upload/avatar_user/" . $avatar_name;
 
                             // Kiểm tra ảnh có tồn tại thật trên server không
                             if (!empty($avatar_name) && file_exists($server_file_path)) {
@@ -89,15 +89,15 @@
                         </div>
 
                         <ul class="user-dropdown-menu">
-                            <li><a href="/FD-Tech/user/profile.php"><i class="fas fa-user-cog"></i> Tài khoản của tôi</a>
+                            <li><a href="/user/profile.php"><i class="fas fa-user-cog"></i> Tài khoản của tôi</a>
                             </li>
-                            <li><a href="/FD-Tech/auth/logout.php"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+                            <li><a href="/auth/logout.php"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
                         </ul>
                     </div>
                 <?php else: ?>
-                    <a href="/FD-Tech/auth/login.php" class="auth-link"><i class="fas fa-user-circle"></i> Đăng nhập</a>
+                    <a href="/auth/login.php" class="auth-link"><i class="fas fa-user-circle"></i> Đăng nhập</a>
                     <span class="divider">|</span>
-                    <a href="/FD-Tech/auth/register.php" class="auth-link">Đăng ký</a>
+                    <a href="/auth/register.php" class="auth-link">Đăng ký</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -125,7 +125,7 @@
                                 ['id' => '8', 'name' => 'PHỤ KIỆN KHÁC'],
                             ];
                             foreach ($categories as $category): ?>
-                                <a href="/FD-Tech/user/product_list.php?cat=<?php echo $category['id']; ?>&cname=<?php echo urlencode($category['name']); ?>"
+                                <a href="/user/product_list.php?cat=<?php echo $category['id']; ?>&cname=<?php echo urlencode($category['name']); ?>"
                                     class="category-item">
                                     <span><?php echo $category['name']; ?></span>
                                     <i class="fas fa-chevron-right"></i>
@@ -141,8 +141,8 @@
                 </form>
 
                 <div class="header-icons">
-                    <a href="/FD-Tech/user/profile.php?action=notifications"><i class="far fa-bell"></i></a>
-                    <a href="/FD-Tech/user/cart.php" class="cart-icon">
+                    <a href="/user/profile.php?action=notifications"><i class="far fa-bell"></i></a>
+                    <a href="/user/cart.php" class="cart-icon">
                         <i class="fas fa-shopping-bag"></i>
                         <span class="cart-text">Giỏ hàng</span>
                     </a>

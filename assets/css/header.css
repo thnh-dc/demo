@@ -1,0 +1,296 @@
+.top-bar .container, .main-header .container, .bottom-header .container { padding: 0 15px; }
+.container {
+    max-width: 1200px; /* Giới hạn độ rộng tối đa */
+    margin: 0 auto;    /* Căn giữa trang */
+    width: 100%;       /* Luôn chiếm đầy chiều rộng khả dụng */
+}
+/* ===== TOP BAR ===== */
+.top-bar { 
+    background: var(--bg-light);
+    padding: 8px 0; font-size: 12px;
+    border-bottom: 1px solid #eee;
+     color: var(--text-muted); }
+.header-flex {
+    display: flex;
+    align-items: center;    /* Đây là chìa khóa để không bị nảy lên */
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* ===== MAIN HEADER ===== */
+.main-header { 
+    padding: 15px 0; 
+    background: var(--bg-main); 
+    border-bottom: 1px solid #eee; }
+.logo { 
+    display: flex; 
+    align-items: center; }
+.logo a {
+    display: flex;          /* Chuyển sang flex để ảnh và chữ thẳng hàng */
+    align-items: center;    /* Căn giữa dọc */
+    gap: 10px;
+    text-decoration: none !important;
+}
+.logo img {
+    display: block;         /* Loại bỏ khoảng trắng thừa dưới ảnh */
+    height: 50px;
+    width: auto;
+}
+
+.main-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.main-menu a { 
+    text-decoration: none; 
+    color: var(--text-dark); 
+    font-weight: 700; 
+    font-size: 16px!important; 
+    transition: color 0.3s; }
+.main-menu a:hover { 
+    color: var(--secondary); }
+
+/* ===== BOTTOM HEADER ===== */
+.bottom-header { 
+    background: var(--primary); 
+    color: #fff; 
+    padding: 10px 0; }
+
+/* ===== CATEGORY MENU ===== */
+.category-wrapper { 
+    position: relative; 
+    width: 260px; }
+.category-toggle { 
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 10px 15px; 
+    font-weight: 700;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    border-radius: var(--radius-sm); 
+    cursor: pointer; 
+    color: white; 
+    font-size: 13px;
+}
+.category-dropdown {
+    display: none; 
+    position: absolute; 
+    top: calc(100% + 5px); 
+    left: 0; 
+    background: white;
+    border: 1px solid #ddd; 
+    border-radius: var(--radius-md); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000; 
+    width: 100%;
+}
+.category-dropdown.active { display: block; }
+.category-item {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 12px 15px;
+    color: var(--text-dark); 
+    text-decoration: none; 
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 12px; 
+    text-transform: uppercase; 
+    transition: background 0.3s, color 0.3s;
+}
+.category-item:hover { 
+    background: #f9f9f9; 
+    color: var(--secondary); }
+
+/* ===== SEARCH BOX (HỢP NHẤT) ===== */
+.search-box {
+    flex: 1; 
+    display: flex; 
+    align-items: center; 
+    background-color: white; 
+    border-radius: 25px; 
+    overflow: hidden; 
+    height: 40px; 
+    width: 100%; 
+    max-width: 500px; 
+    border: 1px solid #ddd; 
+    margin: 0 20px;
+}
+.search-box input { 
+    flex: 1; 
+    border: none; 
+    padding: 0 20px; 
+    outline: none; 
+    height: 100%; 
+    font-size: 14px; }
+.search-box button {
+    background-color: #333f48; 
+    color: white; 
+    border: none; 
+    width: 60px; 
+    height: 100%; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 0; 
+    transition: all 0.3s ease;
+}
+.search-box button:hover { 
+    background-color: var(--secondary); }
+.search-box button i { font-size: 16px; }
+
+/* ===== ICONS & CONTACT ===== */
+.header-icons { 
+    display: flex; 
+    gap: 20px; 
+    align-items: center; }
+.header-icons a { 
+    color: #fff; 
+    text-decoration: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    transition: all 0.3s ease; }
+.header-icons a i { 
+    font-size: 20px; 
+    color: #fff; 
+    transition: color 0.3s ease; }
+.header-icons a:hover, .header-icons a:hover i, .header-icons a:hover .cart-text { color: var(--secondary); }
+.header-icons a:hover { transform: translateY(-2px); }
+
+/* Giỏ hàng hợp nhất */
+.cart-icon { position: relative; }
+.cart-text { 
+    font-size: 14px; 
+    font-weight: 600; }
+.cart-icon .count {
+    position: absolute; 
+    top: -8px; left: 12px;
+    background-color: var(--danger); 
+    color: white;
+    font-size: 11px; 
+    font-weight: bold;
+    width: 18px; 
+    height: 18px; 
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border: 2px solid var(--primary);
+}
+
+/* Liên hệ */
+.header-contact { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    cursor: pointer; 
+    text-decoration: none; }
+.header-contact i { 
+    font-size: 28px; 
+    color: var(--secondary); 
+    transition: color 0.3s; }
+.contact-info { 
+    display: flex; 
+    flex-direction: column; 
+    line-height: 1.2; }
+.contact-info .p { 
+    font-weight: 700; 
+    color: #333; 
+    font-size: 14px; 
+    transition: color 0.3s; }
+.contact-info .e { 
+    font-size: 11px; 
+    color: #777; 
+    transition: color 0.3s; }
+.header-contact:hover .p, .header-contact:hover .e { color: var(--secondary); }
+/* ===== CHỈNH CỤM ĐĂNG NHẬP | ĐĂNG KÝ ===== */
+.header-auth {
+    display: flex !important;
+    align-items: center;
+    gap: 10px; 
+}
+.auth-link {
+    color: #333333 !important;     
+    text-decoration: none !important; 
+    font-weight: 700;
+    font-size: 16px !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;                       
+}
+.auth-link:hover {
+    color: var(--secondary) !important; 
+}
+.header-auth .divider {
+    color: #ccc !important;       
+}
+/* --- PHẦN TÀI KHOẢN NGƯỜI DÙNG --- */
+.user-profile-wrapper {
+    position: relative; /* Cần thiết để menu con bám theo */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.user-profile-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* 1. Mặc định ẩn menu */
+.user-dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; /* Hiện ngay dưới thanh header */
+    right: 0;
+    background: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    z-index: 9999;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+/* 2. HIỆU ỨNG QUAN TRỌNG: Di chuột vào wrapper thì hiện menu */
+.user-profile-wrapper:hover .user-dropdown-menu {
+    display: block;
+}
+
+/* 3. Style cho các item trong menu */
+.user-dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.user-dropdown-menu li a i {
+    width: 16px;
+    color: #00a8ff;
+}
+
+.user-dropdown-menu li a:hover {
+    background-color: #f8f9fa;
+    color: #00a8ff;
+}
+
+/* Định dạng avatar cho tròn và đều */
+.user-avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}

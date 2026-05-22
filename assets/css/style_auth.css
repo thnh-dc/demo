@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.auth-header {
+    background-color: #ffffff;
+    height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.auth-header-container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.auth-logo img {
+    height: 60px;
+}
+
+.auth-brand {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    transform: translateY(5px);
+}
+
+.auth-brand span {
+    color: #00a8ff;
+}
+
+.login-wrapper {
+    background-color: var(--primary);
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-branding {
+    width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.login-branding img {
+    width: 250px;
+    border-radius: 200px;
+    margin-bottom: 1px;
+}
+
+.login-branding h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.login-branding p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.login-form-box {
+    width: 400px;
+    background: white;
+    border-radius: 8px;
+    padding: 35px 30px;
+}
+
+.form-header {
+    margin-bottom: 25px;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d2cfcf;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.forgot-pw {
+    text-align: left;
+    font-size: 13px;
+    color: var(--secondary);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.register-link {
+    text-align: center;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: none;
+}

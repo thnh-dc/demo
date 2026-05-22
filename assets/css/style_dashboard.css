@@ -1,0 +1,120 @@
+body {
+    overflow-x: hidden;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-light);
+    align-items: stretch;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* top*/
+.top-navbar {
+    background-color: var(--bg-main);
+    padding: var(--space-md) var(--space-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-card);
+}
+
+.top-navbar .page-title {
+    margin-bottom: 0;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.admin-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* dashboard container*/
+.dashboard-container {
+    padding: var(--space-xl);
+    max-width: none;
+}
+
+/* stat card */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.stat-card {
+    background-color: var(--bg-main);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-xl);
+}
+
+.stat-icon-revenue {
+    color: var(--primary);
+    background: #e6f0fa;
+}
+
+.stat-icon-orders {
+    color: var(--secondary);
+    background: #e0f7fc;
+}
+
+.stat-icon-products {
+    color: var(--success);
+    background: #e6f4ea;
+}
+
+.stat-info h3 {
+    font-size: var(--text-xl);
+    color: var(--text-dark);
+    margin-top: 5px;
+}
+
+/* chart*/
+.dashboard-chart-section {
+    margin-top: var(--space-xl);
+}
+
+.stat-chart-placeholder {
+    background: var(--bg-main);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    min-height: 300px;
+}
+
+.chart-title {
+    margin-bottom: var(--space-md);
+    color: var(--primary);
+}

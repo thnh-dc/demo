@@ -1,0 +1,187 @@
+/* checkout layout */
+.checkout-layout {
+    max-width: 1400px; /* Giới hạn độ rộng để form */
+    margin: 0 auto;   /* Đẩy form ra chính giữa màn hình */
+    padding: var(--space-md) 0;
+}
+
+/* các phần tử bên trong form cách nhau  */
+.checkout-layout form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+/* section */
+
+.checkout-section {
+    background: var(--bg-main);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    margin-bottom: var(--space-md);
+}
+
+.checkout-section h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-md);
+    color: var(--primary);
+}
+
+/* form */
+
+.checkout-section input,
+.checkout-section textarea {
+    width: 100%;
+    padding: 10px var(--space-md);
+    margin-bottom: var(--space-md);
+    border: 1px solid #ddd;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+}
+
+.checkout-section textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+/* productlist */
+
+.checkout-item {
+    display: flex;
+    gap: 15px;;
+    align-items: center;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid #eee;
+}
+
+.checkout-item:last-child {
+    border-bottom: none;
+}
+
+/* payment */
+
+.checkout-section label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    cursor: pointer;
+}
+.checkout-section input[type="radio"] {
+    width: auto;
+    margin-bottom: 0; /* Xóa khoảng cách thừa để chữ và nút nằm thẳng hàng */
+} /* ép nút radio về lại kích cỡ chuẩn */
+
+.checkout-section b {
+    font-size: var(--text-lg);
+    color: var(--danger);
+}
+
+/* button */
+
+.checkout-section .btn {
+    width: 100%;
+    margin-top: var(--space-md);
+}
+
+/* succes page */
+
+.success-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.success-card {
+    background: var(--bg-main);
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    max-width: 500px;
+}
+
+.success-title {
+    font-size: var(--text-xl);
+    color: var(--success);
+    margin-bottom: var(--space-md);
+}
+
+.success-message {
+    color: var(--text-muted);
+    margin-bottom: var(--space-lg);
+}
+
+/* empty cart */
+
+.empty-cart-container {
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.empty-cart-container h2 {
+    margin-bottom: var(--space-md);
+}
+
+.checkout-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.checkout-price {
+    color: #888;
+    font-size: var(--text-sm);
+}
+.bank-payment-box {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bank-qr-box {
+    width: 220px;
+    height: 220px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 10px;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.bank-qr-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bank-info-box {
+    flex: 1;
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 12px;
+    line-height: 1.8;
+}
+
+.bank-info-box p {
+    margin: 6px 0;
+}
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+.payment-code {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #fef3c7;
+    color: #92400e;
+    border-radius: 6px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}

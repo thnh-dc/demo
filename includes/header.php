@@ -26,7 +26,7 @@
         <div class="container header-flex">
             <div class="logo">
                 <a href="/user/index.php">
-                    <img src="/assets/images/logo-FD.jpg" alt="FD TECH" style="height: 50px;">
+                <img src="../assets/images/logo-fd.jpg" alt="FD Tech Logo" onerror="this.style.display='none'">
                     <span style="font-size: 24px; font-weight: bold; color: #333;">FD<span
                             style="color: #00a8ff;">TECH</span></span>
                 </a>

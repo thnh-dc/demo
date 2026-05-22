@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once '../config/database.php';
-require_once '../libs/PHPMailer/verification_code.php';
+require_once '/config/database.php';
+require_once '/libs/PHPMailer/verification_code.php';
 
 $login_step = $_SESSION['user_login_step'] ?? 1;
 
